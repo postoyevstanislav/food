@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const tabsContent = document.querySelectorAll('.tabcontent')
     const tabsParent = document.querySelector('.tabheader__items ')
 
-    console.log('tabsContent: ',tabsContent)
+    // console.log('tabsContent: ',tabsContent)
 
     function hideTabContent() {
         tabsContent.forEach(item => {
@@ -30,9 +30,9 @@ tabsParent.addEventListener('click', event => {
     console.log('target: ', target)
 
     if(target && target.classList.contains('tabheader__item')) {
-        console.log('tabs: ',tabs)
+        // console.log('tabs: ',tabs)
         tabs.forEach((item, i) => {
-            console.log('item: ',item)
+            // console.log('item: ',item)
             if(target == item) {
                 
                 hideTabContent()
@@ -90,4 +90,52 @@ function setClock(selector, endtime) {
     }
 }
 setClock('.timer', deadLine)
+
+// Modal
+
+const modalTrigger = document.querySelectorAll('[data-modal]')
+const modal = document.querySelector('.modal')
+const modalCloseBtn = document.querySelector('[data-close]')
+
+function openModal() {
+    modal.classList.add('show')
+    modal.classList.remove('hide')
+    document.body.style.overflow = 'hidden'
+    clearInterval(modalTimerId)
+}
+
+modalTrigger.forEach(el => {
+    el.addEventListener('click', openModal)
+})
+
+function closeModal() {
+    modal.classList.add('hide')
+    modal.classList.remove('show')
+    document.body.style.overflow = '' 
+}
+
+modalCloseBtn.addEventListener('click', closeModal)
+
+modal.addEventListener('click', event => {
+    if(event.target == modal) {
+        closeModal()
+    }
+})
+
+document.addEventListener('keydown', (event) => {
+if(event.code === 'Escape' && modal.classList.contains('show')) {
+    closeModal()
+    }
+})
+
+const modalTimerId = setTimeout(openModal, 5000);
+
+function showModalByScroll() {
+    if(window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight){
+        openModal()
+        window.removeEventListener('scroll', showModalByScroll)
+    }
+}
+
+window.addEventListener('scroll', showModalByScroll)
 })
