@@ -2,23 +2,23 @@
   "menu": [
     {
       "img": "img/tabs/vegy.jpg",
-      "altimg": "vegy",
-      "title": "Меню 'Фитнес'",
-      "descr": "Меню 'Фитнес' - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!",
+      "altimg": "veggies",
+      "title": "'Fitness' menu",
+      "descr": "'Fitness' menu is a new approach to meals preparation: even more fresh fruits and vegetables. For people who are invested in sports, active and healthy lifestyle. This is brand new product with an optimal price and high quality!",
       "price": 9
     },
     {
       "img": "img/tabs/post.jpg",
       "altimg": "post",
-      "title": "Меню 'Постное'",
-      "descr": "Меню 'Постное' - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.",
+      "title": "'Vegan' menu",
+      "descr": "'Vegan' menu - a thorough ingredient selection: balanced, meatless meals to keep you healthy and happy. Full harmony with your body and nature in every element.",
       "price": 14
     },
     {
       "img": "img/tabs/elite.jpg",
       "altimg": "elite",
-      "title": "Меню 'Премиум'",
-      "descr": "В меню 'Премиум' мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!",
+      "title": "'Premium' menu",
+      "descr": "'Premium' menu - not only sustainable and convenient packaging, but quality in every prepared meal. Meat, seafood, fruits and vegetables - restaurant menu without actually going to restaurant!",
       "price": 21
     }
   ],
@@ -97,6 +97,36 @@
       "name": "alex",
       "phone": "675820275",
       "id": 15
+    },
+    {
+      "name": "Ihor ",
+      "phone": "987654",
+      "id": 16
+    },
+    {
+      "name": "new",
+      "phone": "192837465",
+      "id": 17
+    },
+    {
+      "name": "Ihor ",
+      "phone": "1234444",
+      "id": 18
+    },
+    {
+      "name": "Stanislav",
+      "phone": "987654",
+      "id": 19
+    },
+    {
+      "name": "Ihor ",
+      "phone": "7777",
+      "id": 20
+    },
+    {
+      "name": "new",
+      "phone": "1234444123",
+      "id": 21
     }
   ]
 }

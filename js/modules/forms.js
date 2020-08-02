@@ -8,7 +8,7 @@ function forms(formSelector, modalTimerId) {
     const message = {
         loading: 'img/form/spinner.svg',
         success: 'Thank you, we will call you later',
-        failure: 'Upss, something go wrong'
+        failure: 'Upss, something went wrong'
     }
 
     forms.forEach(item => {
@@ -30,10 +30,10 @@ function forms(formSelector, modalTimerId) {
             const formData = new FormData(form)
 
                     //FormData to JSON
-            //  const object = {}
-            //  formData.forEach((value, key) => {
-            //      object[key] = value
-            //  })
+                    //  const object = {}
+                    //  formData.forEach((value, key) => {
+                    //      object[key] = value
+                    //  })
 
             const json = JSON.stringify(Object.fromEntries(formData.entries()))
             
@@ -48,6 +48,8 @@ function forms(formSelector, modalTimerId) {
             .finally(() => form.reset())
             
         })
+
+        
     }
 
     function showThanksModal(message) {
@@ -70,7 +72,7 @@ function forms(formSelector, modalTimerId) {
             prevModalDialog.classList.add('show')
             prevModalDialog.classList.remove('hide')
             closeModal('.modal')
-        },1500)
+        },3000)
     }
 
 }
